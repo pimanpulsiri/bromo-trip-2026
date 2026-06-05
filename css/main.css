@@ -1634,6 +1634,21 @@ body {
 }
 .mem-motto-empty { opacity: 0.38; }
 
+/* Profile actions row */
+.mem-profile-actions {
+  display: flex; align-items: center; gap: 8px; margin-top: 8px; flex-wrap: wrap;
+}
+.mem-logout-btn {
+  font-size: 10px; font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 3px 10px; border-radius: 999px;
+  cursor: pointer; font-family: inherit;
+  transition: background 0.15s;
+}
+.mem-logout-btn:hover { background: rgba(255,255,255,0.18); color: #fff; }
+
 /* Change password */
 .pw-hint {
   padding: 12px 16px;
@@ -1692,19 +1707,191 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* ── MEDIA ──────────────────────────────────── */
-@media (max-width: 540px) {
-  .hero-stats         { grid-template-columns: repeat(2,1fr); }
-  .hl-grid            { grid-template-columns: repeat(2,1fr); }
-  .hl-photo-grid      { grid-template-columns: repeat(2,1fr); }
-  .info-grid2         { grid-template-columns: 1fr; }
-  .outfit-count-grid  { grid-template-columns: repeat(3,1fr); }
-  .layer-desc         { display: none; }
-  .day-slot           { flex-wrap: wrap; gap: 4px; }
-  .mem-photo-grid     { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
-  .mem-name           { font-size: 9px; }
-  .mem-profile-name   { font-size: 18px; }
+/* ══════════════════════════════════════════════
+   MOBILE — bottom tab bar (≤ 640px)
+══════════════════════════════════════════════ */
+@media (max-width: 640px) {
+
+  /* ── Bottom tab nav ──────────────────────── */
+  .tab-nav {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0; right: 0;
+    height: auto;
+    padding: 0 0 env(safe-area-inset-bottom, 0px);
+    border-top: 1px solid var(--border);
+    border-bottom: none;
+    box-shadow: 0 -4px 20px rgba(29,78,94,0.07);
+    overflow: visible;
+    background: #f5f8f6;      /* solid — no backdrop-filter (would trap fixed children) */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    justify-content: stretch;
+    z-index: 200;
+  }
+  .tab-brand  { display: none; }
+  .nav-spacer { display: none; }
+
+  .tab-btn {
+    flex: 1;
+    min-height: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    padding: 6px 2px 5px;
+    font-size: 0;       /* hide original text */
+    color: var(--muted);
+    position: relative;
+    transition: color 0.18s;
+  }
+  .tab-btn::before {
+    font-size: 20px;
+    line-height: 1;
+    display: block;
+    margin-bottom: 3px;
+  }
+  .tab-btn::after {
+    content: attr(data-label);
+    font-size: 9px;
+    font-weight: 700;
+    font-family: "Noto Sans Thai", system-ui, sans-serif;
+    display: block;
+    color: inherit;
+    line-height: 1;
+  }
+  .tab-btn[data-tab="overview"]::before   { content: '🗺️'; }
+  .tab-btn[data-tab="itinerary"]::before  { content: '📅'; }
+  .tab-btn[data-tab="spots"]::before      { content: '📍'; }
+  .tab-btn[data-tab="packup"]::before     { content: '🎒'; }
+  .tab-btn[data-tab="wear"]::before       { content: '👕'; }
+  .tab-btn[data-tab="members"]::before    { content: '👥'; }
+
+  .tab-btn.active { background: transparent; color: var(--primary); }
+  .tab-btn.active::before {
+    filter: drop-shadow(0 0 3px rgba(29,78,94,0.25));
+  }
+
+  /* ── User badge → hidden on mobile (Members tab shows identity) ── */
+  .user-badge { display: none !important; }
+
+  /* ── Pack Up sticky no longer needs offset ─ */
+  .progress-wrap { top: 0; }
+
+  /* ── Body padding (room for bottom nav) ─── */
+  .ov-body, .itin-body, .spots-body,
+  .wear-body, .members-body, .memo-body { padding-bottom: 80px; }
+  .pack-content { padding-bottom: 80px; }
+
+  /* ── Shared ─────────────────────────────── */
+  .wrap { padding: 0 14px; }
+  .section-hd { margin-bottom: 16px; }
+  .section-hd h2 { font-size: 20px; }
+  .section-hd p  { font-size: 12px; }
+  .eyebrow { font-size: 9px; }
+
+  /* ── Login overlay ──────────────────────── */
+  .login-card { padding: 26px 20px 22px; border-radius: 20px; }
+  .login-title { font-size: 22px; }
+  .login-volcano { font-size: 36px; }
+  .role-btn { padding: 14px 10px; }
+  .role-ico { font-size: 22px; }
+
+  /* ── Overview ───────────────────────────── */
+  .hero { height: 54vh; min-height: 290px; max-height: 460px; }
+  .hero-content { padding: 16px 14px 20px; }
+  .hero-title { font-size: clamp(1.8rem, 7.5vw, 2.6rem); }
+  .hero-tag { font-size: 12px; margin-bottom: 14px; }
+  .hero-stats { grid-template-columns: repeat(2,1fr); gap: 6px; }
+  .stat-n { font-size: 17px; }
+  .ov-body { padding-top: 20px; }
+  .hl-grid { grid-template-columns: repeat(2,1fr); }
+  .hl-photo-grid { grid-template-columns: repeat(2,1fr); }
+  .badge-row { gap: 10px; padding: 14px 14px; }
+  .badge-img { width: 55px; height: 55px; }
+  .trip-summary { padding: 16px; }
+  .trip-summary p { font-size: 13px; }
+
+  /* ── Itinerary ──────────────────────────── */
+  .itin-body { padding-top: 20px; }
+  .timeline::before { left: 13px; }
+  .day-block { padding-left: 36px; margin-bottom: 14px; }
+  .day-dot { left: 3px; width: 20px; height: 20px; font-size: 8px; top: 14px; }
+  .day-head { padding: 9px 12px 8px; gap: 6px; }
+  .day-title { font-size: 12px; }
+  .tr { padding: 7px 12px; gap: 7px; }
+  .tr-name { font-size: 12px; }
+  .tr-desc { font-size: 10px; }
+
+  /* ── Spots ──────────────────────────────── */
+  .spots-body { padding-top: 20px; }
+  .spot-art { height: 150px; }
+  .spot-body { padding: 14px 14px 16px; }
+  .spot-name { font-size: 14px; }
+  .spot-desc { font-size: 12px; }
+  .info-grid2 { grid-template-columns: 1fr 1fr; }
+
+  /* ── Pack Up ────────────────────────────── */
+  .pack-content { padding: 14px 12px 80px; }
+  .progress-wrap { padding: 10px 14px; gap: 8px; }
+  .progress-label { font-size: 10px; }
+  .progress-count { font-size: 12px; }
+  .section-head { padding: 11px 14px 10px; }
+  .section-title { font-size: 13px; }
+  .item { padding: 10px 12px; gap: 10px; }
+  .item-name { font-size: 13px; }
+  .item-desc { font-size: 11px; }
+
+  /* ── What to Wear ───────────────────────── */
+  .wear-body { padding-top: 20px; }
+  .wear-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .outfit-count-grid { grid-template-columns: repeat(3,1fr); }
+  .layer-desc { display: none; }
+  .day-slot { flex-wrap: wrap; gap: 3px; }
+  .pack-tip { padding: 12px 14px; }
+  .tip-title { font-size: 12px; }
+  .tip-desc  { font-size: 11px; }
+
+  /* ── Members ────────────────────────────── */
+  .members-body { padding-top: 20px; }
+  .mem-photo-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    gap: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .mem-photo-grid::-webkit-scrollbar { display: none; }
+  .mem-card  { flex: 0 0 74px; min-width: 74px; padding: 7px 5px 9px; border-width: 1.5px; }
+  .mem-name  { font-size: 10px; }
+  .mem-exp-chip { font-size: 8px; }
+  .mem-you-badge { font-size: 7px; padding: 2px 5px; }
+
+  .mem-profile-hd { padding: 14px 14px 14px; gap: 12px; flex-wrap: wrap; }
+  .mem-profile-name { font-size: 20px; }
   .mem-profile-avatar { width: 60px; height: 80px; }
+  .mem-profile-stats { font-size: 11px; flex-wrap: wrap; gap: 3px; }
+  .mem-motto-input { font-size: 11px; }
+  .mem-motto-text  { font-size: 11px; }
+
+  .memo-card { margin-bottom: 10px; }
+  .expense-add-form { padding: 12px 12px; }
+  .expense-form-row { flex-wrap: wrap; gap: 6px; }
+  .expense-input-sm { flex: 1 1 110px; }
+  .memo-notes-area  { min-height: 110px; }
+}
+
+/* ── Very small phones (≤380px) ─────────────── */
+@media (max-width: 380px) {
+  .tab-btn::before { font-size: 18px; }
+  .tab-btn { min-height: 52px; }
+  .mem-card { flex: 0 0 66px; min-width: 66px; }
+  .hero-title { font-size: clamp(1.6rem, 7vw, 2rem); }
 }
 
 @media print {

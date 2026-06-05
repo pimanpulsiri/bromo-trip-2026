@@ -643,7 +643,10 @@ function renderMemberDetail() {
           <span class="mem-profile-dot">·</span>
           <span class="mem-profile-total">${totalStr}</span>
         </div>
-        ${isOwnEdit ? '<div class="mem-profile-tag">✏️ บัญชีของคุณ</div>' : ''}
+        <div class="mem-profile-actions">
+          ${isOwnEdit ? '<div class="mem-profile-tag">✏️ บัญชีของคุณ</div>' : ''}
+          ${isOwnEdit ? '<button class="mem-logout-btn" onclick="logout()">ออกจากระบบ</button>' : ''}
+        </div>
       </div>
     </div>`;
 
