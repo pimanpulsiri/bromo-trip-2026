@@ -1,0 +1,148 @@
+<svg viewBox="0 0 1200 580" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#050d1e"/>
+      <stop offset="28%"  stop-color="#0c1f42"/>
+      <stop offset="58%"  stop-color="#1e3a6e"/>
+      <stop offset="78%"  stop-color="#7c2d12"/>
+      <stop offset="90%"  stop-color="#c2410c"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="100%" r="55%">
+      <stop offset="0%"   stop-color="#fde68a" stop-opacity="0.75"/>
+      <stop offset="35%"  stop-color="#f97316" stop-opacity="0.4"/>
+      <stop offset="70%"  stop-color="#c2410c" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <radialGradient id="craterGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#f97316" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <linearGradient id="sandGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0f2233"/>
+      <stop offset="100%" stop-color="#060d18"/>
+    </linearGradient>
+    <linearGradient id="mtn1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1a3a5a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0d2030" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="mtn2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#102438"/>
+      <stop offset="100%" stop-color="#080f1e"/>
+    </linearGradient>
+    <filter id="smoke" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="horizonBlur">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="580" fill="url(#sky)"/>
+
+  <!-- Sun glow -->
+  <ellipse cx="600" cy="580" rx="660" ry="300" fill="url(#sunGlow)"/>
+
+  <!-- Stars -->
+  <circle cx="55"  cy="32"  r="1.3" fill="white" opacity="0.85"/>
+  <circle cx="140" cy="18"  r="0.9" fill="white" opacity="0.7"/>
+  <circle cx="215" cy="48"  r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="305" cy="22"  r="1.0" fill="white" opacity="0.65"/>
+  <circle cx="385" cy="40"  r="1.2" fill="white" opacity="0.75"/>
+  <circle cx="460" cy="14"  r="0.8" fill="white" opacity="0.6"/>
+  <circle cx="540" cy="38"  r="1.4" fill="white" opacity="0.8"/>
+  <circle cx="640" cy="20"  r="0.9" fill="white" opacity="0.65"/>
+  <circle cx="720" cy="44"  r="1.3" fill="white" opacity="0.78"/>
+  <circle cx="800" cy="16"  r="1.0" fill="white" opacity="0.7"/>
+  <circle cx="880" cy="50"  r="1.5" fill="white" opacity="0.82"/>
+  <circle cx="960" cy="28"  r="0.8" fill="white" opacity="0.6"/>
+  <circle cx="1040" cy="42" r="1.2" fill="white" opacity="0.75"/>
+  <circle cx="1120" cy="20" r="1.0" fill="white" opacity="0.68"/>
+  <circle cx="1165" cy="55" r="1.4" fill="white" opacity="0.72"/>
+  <!-- Row 2 -->
+  <circle cx="90"  cy="80" r="0.9" fill="white" opacity="0.5"/>
+  <circle cx="175" cy="90" r="1.1" fill="white" opacity="0.55"/>
+  <circle cx="260" cy="72" r="0.8" fill="white" opacity="0.48"/>
+  <circle cx="430" cy="85" r="1.0" fill="white" opacity="0.52"/>
+  <circle cx="595" cy="75" r="0.9" fill="white" opacity="0.5"/>
+  <circle cx="760" cy="88" r="1.1" fill="white" opacity="0.55"/>
+  <circle cx="920" cy="78" r="0.8" fill="white" opacity="0.48"/>
+  <circle cx="1080" cy="82" r="1.0" fill="white" opacity="0.52"/>
+  <!-- Bright planet -->
+  <circle cx="980" cy="42" r="2.2" fill="#fde68a" opacity="0.95" filter="url(#glow)"/>
+  <circle cx="200" cy="36" r="1.8" fill="white"   opacity="0.98" filter="url(#glow)"/>
+
+  <!-- Far mountain ridge -->
+  <path d="M0,340 L80,275 L160,300 L260,258 L360,282 L460,252 L560,272 L660,248 L760,268 L860,244 L960,265 L1060,242 L1160,262 L1200,252 L1200,580 L0,580Z" fill="url(#mtn1)"/>
+
+  <!-- Mid mountain ridge -->
+  <path d="M0,370 L70,320 L150,344 L240,305 L330,328 L420,300 L510,320 L600,295 L700,315 L800,290 L900,312 L1000,288 L1100,308 L1200,295 L1200,580 L0,580Z" fill="url(#mtn2)"/>
+
+  <!-- Tengger Caldera Rim -->
+  <path d="M0,400 L80,368 L170,382 L270,355 L380,372 L480,350 L600,360 L720,348 L820,362 L920,345 L1020,358 L1120,342 L1200,355 L1200,580 L0,580Z" fill="#0d1e30"/>
+
+  <!-- Gunung Batok (left cone) -->
+  <path d="M340,400 L415,318 L490,400Z" fill="#0a1726"/>
+
+  <!-- BROMO main cone (center) -->
+  <path d="M490,400 L600,278 L710,400Z" fill="#08131f"/>
+  <!-- Crater flat top -->
+  <path d="M584,282 L600,272 L616,282 L611,292 L589,292Z" fill="#060f1a"/>
+  <!-- Crater glow -->
+  <ellipse cx="600" cy="286" rx="14" ry="7" fill="#f97316" opacity="0.3" filter="url(#glow)"/>
+
+  <!-- Right smaller cone -->
+  <path d="M700,400 L768,330 L836,400Z" fill="#0a1726"/>
+
+  <!-- Smoke from Bromo -->
+  <g filter="url(#smoke)">
+    <ellipse cx="598" cy="258" rx="20" ry="11" fill="#9ca3b8" opacity="0.55"/>
+    <ellipse cx="604" cy="234" rx="28" ry="14" fill="#9ca3b8" opacity="0.42"/>
+    <ellipse cx="612" cy="208" rx="36" ry="17" fill="#9ca3b8" opacity="0.3"/>
+    <ellipse cx="620" cy="180" rx="45" ry="21" fill="#9ca3b8" opacity="0.2"/>
+    <ellipse cx="630" cy="152" rx="56" ry="24" fill="#9ca3b8" opacity="0.12"/>
+  </g>
+
+  <!-- Sea of Sand -->
+  <path d="M0,432 Q200,415 400,428 Q600,440 800,422 Q1000,405 1200,420 L1200,580 L0,580Z" fill="url(#sandGrad)"/>
+
+  <!-- Sand surface lines -->
+  <path d="M0,445 Q300,432 600,445 Q900,458 1200,442" stroke="#112030" stroke-width="1.2" fill="none" opacity="0.5" filter="url(#horizonBlur)"/>
+  <path d="M0,462 Q280,450 560,462 Q840,474 1200,458" stroke="#112030" stroke-width="1"   fill="none" opacity="0.35" filter="url(#horizonBlur)"/>
+
+  <!-- Foreground -->
+  <path d="M0,480 Q150,468 320,478 Q500,488 680,472 Q860,458 1040,470 Q1130,476 1200,468 L1200,580 L0,580Z" fill="#060c18"/>
+
+  <!-- Jeep silhouette (left) -->
+  <g transform="translate(165,460)" opacity="0.65">
+    <rect x="0"  y="9"  width="52" height="19" rx="3" fill="#08131f"/>
+    <rect x="6"  y="2"  width="30" height="12" rx="3" fill="#08131f"/>
+    <circle cx="11" cy="30" r="7" fill="#050d18"/>
+    <circle cx="41" cy="30" r="7" fill="#050d18"/>
+    <circle cx="11" cy="30" r="3"  fill="#0f2030"/>
+    <circle cx="41" cy="30" r="3"  fill="#0f2030"/>
+    <rect x="6"  y="1"  width="30" height="2.5" rx="1" fill="#0f2030"/>
+  </g>
+
+  <!-- Two tiny hiker figures (right side) -->
+  <g transform="translate(948,455)" opacity="0.55">
+    <rect x="0"  y="6"  width="5" height="12" rx="1.5" fill="#08131f"/>
+    <circle cx="2.5" cy="4"  r="4"   fill="#08131f"/>
+    <rect x="4"  y="8"  width="4"  height="9" rx="1" fill="#08131f"/>
+    <line x1="4.5" y1="12" x2="9" y2="22" stroke="#08131f" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(964,458)" opacity="0.5">
+    <rect x="0"  y="6"  width="5" height="11" rx="1.5" fill="#08131f"/>
+    <circle cx="2.5" cy="4"  r="3.5" fill="#08131f"/>
+    <rect x="-4" y="8"  width="4"  height="8"  rx="1" fill="#08131f"/>
+    <line x1="0"   y1="12" x2="-4" y2="21" stroke="#08131f" stroke-width="1.5"/>
+  </g>
+
+  <!-- Horizon atmospheric line -->
+  <line x1="0" y1="368" x2="1200" y2="368" stroke="#f97316" stroke-width="1.2" opacity="0.4" filter="url(#horizonBlur)"/>
+</svg>

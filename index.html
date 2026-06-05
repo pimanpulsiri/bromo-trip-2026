@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bromo Adventure Trip 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- ══ LOGIN OVERLAY ══════════════════════════════ -->
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-card">
+
+    <div class="login-hero">
+      <div class="login-volcano">🌋</div>
+      <h1 class="login-title">Bromo '26</h1>
+      <p class="login-sub">11–16 June 2026 · East Java, Indonesia</p>
+    </div>
+
+    <!-- Step 1: เลือก Role -->
+    <div class="login-step" id="stepRole">
+      <p class="login-q">คุณเข้าในฐานะ?</p>
+      <div class="role-grid">
+        <button class="role-btn role-member" onclick="selectRole('member')">
+          <span class="role-ico">👥</span>
+          <span class="role-name">Trip Member</span>
+          <span class="role-note">10 คนในทริป · แก้ไขได้</span>
+        </button>
+        <button class="role-btn role-viewer" onclick="selectRole('viewer')">
+          <span class="role-ico">👁️</span>
+          <span class="role-name">Viewer</span>
+          <span class="role-note">ดูข้อมูลทั่วไป</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 2: Member login -->
+    <div class="login-step" id="stepMember" style="display:none">
+      <p class="login-q">เลือกชื่อ และใส่ Password</p>
+      <div class="login-field">
+        <label class="login-label">ชื่อของคุณ</label>
+        <select id="nameSelect" class="login-select">
+          <option value="">— เลือกชื่อ —</option>
+          <option>Philip</option>
+          <option>Nymph</option>
+          <option>Teeratat</option>
+          <option>Nook</option>
+          <option>Pete</option>
+          <option>Pun+</option>
+          <option>Noey</option>
+          <option>Nott</option>
+          <option>Teechai</option>
+          <option>Jam</option>
+        </select>
+      </div>
+      <div class="login-field">
+        <label class="login-label">Password</label>
+        <input type="password" id="passInput" class="login-input" placeholder="กรอก Password" onkeydown="if(event.key==='Enter')submitLogin()">
+      </div>
+      <p class="login-error" id="loginError"></p>
+      <button class="login-submit" onclick="submitLogin()">เข้าสู่ระบบ →</button>
+      <button class="login-back" onclick="backToRoles()">← ย้อนกลับ</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ APP ════════════════════════════════════════ -->
+<nav class="tab-nav">
+  <div class="tab-brand"><span class="tab-brand-dot"></span>Bromo '26</div>
+  <button class="tab-btn" data-tab="overview">Overview</button>
+  <button class="tab-btn" data-tab="itinerary">Itinerary</button>
+  <button class="tab-btn" data-tab="spots">Spots</button>
+  <button class="tab-btn" data-tab="packup">Pack Up</button>
+  <button class="tab-btn" data-tab="wear">What to Wear</button>
+  <button class="tab-btn" data-tab="members">Members</button>
+  <div class="nav-spacer"></div>
+  <div class="user-badge" id="userBadge" style="display:none"></div>
+</nav>
+
+<div class="tab-page" id="tab-overview"></div>
+<div class="tab-page" id="tab-itinerary"></div>
+<div class="tab-page" id="tab-spots"></div>
+<div class="tab-page" id="tab-packup"></div>
+<div class="tab-page" id="tab-wear"></div>
+<div class="tab-page" id="tab-members"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

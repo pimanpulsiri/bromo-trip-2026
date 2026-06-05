@@ -1,0 +1,143 @@
+<svg viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bf-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#03060f"/>
+      <stop offset="55%"  stop-color="#06091c"/>
+      <stop offset="100%" stop-color="#0a0e28"/>
+    </linearGradient>
+    <radialGradient id="fire-amb" cx="50%" cy="72%" r="38%">
+      <stop offset="0%"   stop-color="#38bdf8" stop-opacity="0.55"/>
+      <stop offset="45%"  stop-color="#0ea5e9" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <radialGradient id="milky" cx="65%" cy="35%" r="48%" gradientTransform="rotate(-18,0.65,0.35)">
+      <stop offset="0%"   stop-color="#312e81" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <linearGradient id="lake-g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1d4ed8" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#0a1548" stop-opacity="0.95"/>
+    </linearGradient>
+    <filter id="flame-f" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-lg" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="star-g" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <clipPath id="clip-bf"><rect width="700" height="480"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#clip-bf)">
+    <!-- Night sky -->
+    <rect width="700" height="480" fill="url(#bf-sky)"/>
+
+    <!-- Milky way -->
+    <ellipse cx="455" cy="140" rx="340" ry="88" fill="url(#milky)" transform="rotate(-18,455,140)"/>
+
+    <!-- ── STARS ── -->
+    <circle cx="28"  cy="18"  r="1.1" fill="white" opacity="0.92"/>
+    <circle cx="88"  cy="42"  r="0.8" fill="white" opacity="0.72"/>
+    <circle cx="152" cy="14"  r="1.3" fill="white" opacity="0.88"/>
+    <circle cx="205" cy="52"  r="0.7" fill="white" opacity="0.65"/>
+    <circle cx="264" cy="24"  r="1.0" fill="white" opacity="0.8"/>
+    <circle cx="328" cy="38"  r="0.9" fill="white" opacity="0.72"/>
+    <circle cx="392" cy="16"  r="1.2" fill="white" opacity="0.85"/>
+    <circle cx="452" cy="46"  r="0.8" fill="white" opacity="0.68"/>
+    <circle cx="516" cy="20"  r="1.4" fill="white" opacity="0.9"/>
+    <circle cx="578" cy="50"  r="0.9" fill="white" opacity="0.7"/>
+    <circle cx="635" cy="22"  r="1.1" fill="white" opacity="0.82"/>
+    <circle cx="672" cy="48"  r="0.8" fill="white" opacity="0.65"/>
+    <!-- Row 2 -->
+    <circle cx="52"  cy="78"  r="0.8" fill="white" opacity="0.55"/>
+    <circle cx="116" cy="92"  r="1.0" fill="white" opacity="0.62"/>
+    <circle cx="178" cy="72"  r="0.7" fill="white" opacity="0.5"/>
+    <circle cx="242" cy="90"  r="1.1" fill="white" opacity="0.65"/>
+    <circle cx="308" cy="76"  r="0.8" fill="white" opacity="0.52"/>
+    <circle cx="370" cy="88"  r="0.7" fill="white" opacity="0.5"/>
+    <circle cx="436" cy="74"  r="1.0" fill="white" opacity="0.62"/>
+    <circle cx="500" cy="90"  r="0.8" fill="white" opacity="0.55"/>
+    <circle cx="562" cy="78"  r="1.0" fill="white" opacity="0.6"/>
+    <circle cx="622" cy="90"  r="0.7" fill="white" opacity="0.5"/>
+    <circle cx="678" cy="75"  r="0.9" fill="white" opacity="0.55"/>
+    <!-- Milky way cluster -->
+    <circle cx="440" cy="108" r="0.5" fill="white" opacity="0.38"/>
+    <circle cx="456" cy="118" r="0.4" fill="white" opacity="0.32"/>
+    <circle cx="472" cy="104" r="0.6" fill="white" opacity="0.4"/>
+    <circle cx="488" cy="116" r="0.4" fill="white" opacity="0.32"/>
+    <circle cx="504" cy="110" r="0.5" fill="white" opacity="0.38"/>
+    <circle cx="520" cy="122" r="0.4" fill="white" opacity="0.3"/>
+    <!-- Bright stars -->
+    <circle cx="558" cy="36"  r="2.2" fill="#a5f3fc" opacity="0.95" filter="url(#star-g)"/>
+    <circle cx="120" cy="32"  r="1.9" fill="white"   opacity="0.98" filter="url(#star-g)"/>
+
+    <!-- ── BLUE FIRE AMBIENT LIGHT ── -->
+    <ellipse cx="350" cy="346" rx="200" ry="95" fill="url(#fire-amb)"/>
+    <ellipse cx="350" cy="358" rx="90"  ry="44" fill="#0ea5e9" opacity="0.18" filter="url(#glow-lg)"/>
+
+    <!-- ── CRATER RIM SILHOUETTE ── -->
+    <path d="M0,318 L35,302 L62,314 L92,295 L122,308 L155,290 L188,303 L220,282 L252,296 L285,276 L318,290 L350,272 L382,288 L415,268 L448,282 L480,262 L512,276 L545,258 L578,272 L610,254 L642,268 L675,252 L700,262 L700,480 L0,480Z" fill="#07091a"/>
+
+    <!-- ── ROCKY TERRAIN ── -->
+    <path d="M148,390 L172,372 L200,382 L230,365 L262,378 L292,360 L322,374 L352,356 L382,370 L412,352 L442,368 L472,350 L502,364 L522,352 L522,480 L148,480Z" fill="#04060f"/>
+
+    <!-- ── ACID LAKE ── -->
+    <ellipse cx="350" cy="428" rx="172" ry="46" fill="url(#lake-g)"/>
+    <ellipse cx="350" cy="426" rx="148" ry="36" fill="none" stroke="#38bdf8" stroke-width="1.2" opacity="0.32"/>
+    <ellipse cx="350" cy="428" rx="106" ry="22" fill="none" stroke="#60a5fa" stroke-width="0.8" opacity="0.24"/>
+    <ellipse cx="350" cy="430" rx="58"  ry="11" fill="none" stroke="#93c5fd" stroke-width="0.6" opacity="0.18"/>
+    <!-- Lake shimmer streaks -->
+    <line x1="228" y1="422" x2="290" y2="418" stroke="#93c5fd" stroke-width="1.5" opacity="0.28"/>
+    <line x1="368" y1="426" x2="438" y2="422" stroke="#93c5fd" stroke-width="1.2" opacity="0.22"/>
+    <line x1="268" y1="434" x2="310" y2="431" stroke="#93c5fd" stroke-width="1"   opacity="0.18"/>
+    <line x1="392" y1="432" x2="428" y2="429" stroke="#93c5fd" stroke-width="1"   opacity="0.18"/>
+    <!-- Fire reflection on lake -->
+    <ellipse cx="350" cy="434" rx="65" ry="16" fill="#0ea5e9" opacity="0.14" filter="url(#glow-lg)"/>
+
+    <!-- ── BLUE FIRE FLAMES ── -->
+    <g filter="url(#flame-f)">
+      <!-- Outer glow base -->
+      <ellipse cx="350" cy="368" rx="82" ry="22" fill="#0369a1" opacity="0.35"/>
+      <!-- Main flame bodies -->
+      <path d="M280,372 Q283,345 287,312 Q293,348 290,374Z" fill="#38bdf8" opacity="0.88"/>
+      <path d="M296,374 Q300,338 304,298 Q312,340 308,376Z" fill="#0ea5e9" opacity="0.92"/>
+      <path d="M312,372 Q318,330 323,288 Q330,334 326,374Z" fill="#38bdf8" opacity="0.96"/>
+      <path d="M330,374 Q338,325 343,280 Q352,328 346,376Z" fill="#60a5fa" opacity="0.92"/>
+      <path d="M350,372 Q357,332 362,290 Q370,336 365,374Z" fill="#38bdf8" opacity="0.9"/>
+      <path d="M368,374 Q374,340 378,305 Q384,342 381,375Z" fill="#0ea5e9" opacity="0.88"/>
+      <path d="M385,372 Q390,348 394,322 Q399,350 396,373Z" fill="#38bdf8" opacity="0.82"/>
+      <path d="M402,374 Q406,352 410,330 Q414,354 411,374Z" fill="#7dd3fc" opacity="0.75"/>
+      <!-- Tall flame tips (brightest) -->
+      <path d="M304,294 Q307,276 310,260 Q313,277 310,295Z" fill="#e0f2fe" opacity="0.75"/>
+      <path d="M322,282 Q326,262 329,244 Q332,263 329,284Z" fill="#f0f9ff" opacity="0.82"/>
+      <path d="M342,272 Q347,250 350,232 Q353,251 350,274Z" fill="#ffffff"  opacity="0.88"/>
+      <path d="M362,280 Q366,260 370,242 Q373,261 370,282Z" fill="#f0f9ff" opacity="0.8"/>
+      <path d="M380,292 Q383,274 386,258 Q389,275 386,294Z" fill="#e0f2fe" opacity="0.72"/>
+    </g>
+
+    <!-- ── SULFUR GAS WISPS ── -->
+    <ellipse cx="310" cy="268" rx="28" ry="13" fill="#fde68a" opacity="0.07" filter="url(#glow-lg)"/>
+    <ellipse cx="386" cy="258" rx="22" ry="10" fill="#fde68a" opacity="0.05" filter="url(#glow-lg)"/>
+
+    <!-- ── HIKER SILHOUETTES ── -->
+    <g transform="translate(228,368)" opacity="0.82">
+      <rect x="0"  y="7"  width="6"  height="13" rx="1.5" fill="#04060f"/>
+      <circle cx="3" cy="4.5" r="4.5" fill="#04060f"/>
+      <rect x="5"  y="9"  width="4.5" height="10" rx="1" fill="#04060f"/>
+      <line x1="5" y1="13" x2="11" y2="24" stroke="#04060f" stroke-width="1.8"/>
+    </g>
+    <g transform="translate(452,360)" opacity="0.75">
+      <rect x="0"  y="7"  width="5.5" height="12" rx="1.5" fill="#04060f"/>
+      <circle cx="2.8" cy="4.5" r="4" fill="#04060f"/>
+      <rect x="-4.5" y="9"  width="4.5" height="10" rx="1" fill="#04060f"/>
+      <line x1="0" y1="13" x2="-5" y2="24" stroke="#04060f" stroke-width="1.8"/>
+    </g>
+
+    <!-- Foreground rocks -->
+    <path d="M0,452 L46,436 L88,450 L135,436 L178,450 L210,438 L0,480Z"         fill="#030509"/>
+    <path d="M490,445 L536,430 L580,444 L625,430 L668,444 L700,435 L700,480 L490,480Z" fill="#030509"/>
+  </g>
+</svg>

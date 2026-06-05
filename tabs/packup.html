@@ -1,0 +1,151 @@
+<div class="progress-wrap">
+  <span class="progress-label">แพ็คแล้ว</span>
+  <div class="bar-track"><div class="bar-fill" id="barFill"></div></div>
+  <span class="progress-count" id="progressCount">0 / 0</span>
+</div>
+
+<div class="pack-content">
+
+  <div class="alert">
+    <strong>⚠️ Tips จาก Tour Organizer</strong>
+    ทริปนี้ <b>นั่งรถนาน</b> แต่เดินไม่เยอะ · เตรียม <b>ขนม + นม</b> ไว้กินในรถ · มื้อดีๆ จะได้กินที่โรงแรม · ยาแก้เมารถจำเป็นมาก · แลกเงิน <b>~5,000–7,500 ฿</b> ต่อคน
+  </div>
+
+  <!-- CRITICAL -->
+  <div class="section-card">
+    <div class="section-head">
+      <span class="section-icon">⭐</span>
+      <span class="section-title">Critical — ขาดไม่ได้</span>
+      <span class="section-counter" id="cnt-critical">0/0</span>
+    </div>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">💡 Headlamp + ถ่านสำรอง</div><div class="item-desc">เดินขึ้น Ijen ตี 2 — ทางมืดสนิท ไม่มี = ไปต่อไม่ได้</div><div class="item-tags"><span class="tag tag-must">★ MUST</span><span class="tag tag-ijen">Ijen</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">😷 Gas Mask</div><div class="item-desc">Tour รวมให้แล้ว ✅ — ควันกำมะถัน Ijen อันตรายมาก</div><div class="item-tags"><span class="tag tag-must">★ MUST</span><span class="tag tag-ijen">Ijen</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🧥 Down Jacket / Puffer มีฮู้ด</div><div class="item-desc">Bromo ~3°C ตี 3 · Ijen ~5°C ตี 2 — ลมแรงมากทั้งสองที่</div><div class="item-tags"><span class="tag tag-must">★ MUST</span><span class="tag tag-bromo">Bromo</span><span class="tag tag-ijen">Ijen</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">👟 Trail / Hiking Shoes (หุ้มส้น)</div><div class="item-desc">ดอกยางเกาะพื้น — Bromo ทราย · Tumpak Sewu ลื่น · Ijen กรวดชัน</div><div class="item-tags"><span class="tag tag-must">★ MUST</span><span class="tag tag-all">ทุกวัน</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">👟 Water Shoes / Sandal รัดส้น</div><div class="item-desc">Madakaripura + Kapas Biru — ต้องลุยน้ำ รองเท้าแตะธรรมดาหลุดง่าย</div><div class="item-tags"><span class="tag tag-must">★ MUST</span><span class="tag tag-water">น้ำตก</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🎒 Dry Bag กันน้ำ (15–20L)</div><div class="item-desc">ใส่กล้อง มือถือ ผ้าเปลี่ยน — Madakaripura เปียกโชก 100%</div><div class="item-tags"><span class="tag tag-must">★ MUST</span><span class="tag tag-water">น้ำตก</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🔌 Adapter ปลั๊กยุโรป (Type C/F)</div><div class="item-desc">Indonesia ใช้ 2 ขากลม — ปลั๊กไทยใช้ไม่ได้</div><div class="item-tags"><span class="tag tag-must">★ MUST</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🛂 Passport + สำเนา Passport</div><div class="item-desc">Indonesia VOA ที่สนามบิน — เช็คหมดอายุก่อนบิน</div><div class="item-tags"><span class="tag tag-must">★ MUST</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🔋 Power Bank (10,000+ mAh)</div><div class="item-desc">ความเย็น Bromo + Ijen กินแบตเร็วมาก · ชาร์จยากในรถ</div><div class="item-tags"><span class="tag tag-must">★ MUST</span></div></div></label>
+  </div>
+
+  <!-- CLOTHING -->
+  <div class="section-card">
+    <div class="section-head">
+      <span class="section-icon">👕</span>
+      <span class="section-title">เสื้อผ้า</span>
+      <span class="section-counter" id="cnt-clothing">0/0</span>
+    </div>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🧤 หมวกไหมพรม + ถุงมือ</div><div class="item-desc">ไม่มี = หูชา มือแข็ง ตอน Bromo ตี 3 และ Ijen ตี 2</div><div class="item-tags"><span class="tag tag-bromo">Bromo</span><span class="tag tag-ijen">Ijen</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🧶 Fleece / Mid Layer</div><div class="item-desc">กักความอบอุ่น ใส่ระหว่าง base layer กับ down jacket</div><div class="item-tags"><span class="tag tag-bromo">Bromo</span><span class="tag tag-ijen">Ijen</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🧣 Buff / ผ้าพันคอ</div><div class="item-desc">กันฝุ่น Sea of Sand Bromo + ใส่ใต้ gas mask ที่ Ijen</div><div class="item-tags"><span class="tag tag-bromo">Bromo</span><span class="tag tag-ijen">Ijen</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🌧️ เสื้อกันฝน / Raincoat</div><div class="item-desc">Madakaripura ผนังปล่อยน้ำเหมือนฝนตกหนัก · June = rainy season</div><div class="item-tags"><span class="tag tag-water">น้ำตก</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">👙 Swimwear / ชุดกีฬา Quick-dry</div><div class="item-desc">ใส่ข้างในวันน้ำตก — Madakaripura · Kapas Biru · Tumpak Sewu</div><div class="item-tags"><span class="tag tag-water">น้ำตก</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">👕 Quick-dry shirts × 2–3</div><div class="item-desc">ห้ามใส่ยีนส์วันน้ำตก — เปียกแล้วแห้งช้ามาก</div><div class="item-tags"><span class="tag tag-all">ทุกวัน</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">👖 กางเกงเดินป่า / Joggers × 2</div><div class="item-desc">ขายาว — กันลม Bromo/Ijen + ลุยป่า Tumpak Sewu</div><div class="item-tags"><span class="tag tag-all">ทุกวัน</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🧦 Wool / Hiking Socks หนา × 3 คู่</div><div class="item-desc">เท้าอบอุ่น + กันพอง Ijen trek · เผื่อเปียก</div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">👗 ชุดเปลี่ยน (dry set) × 1</div><div class="item-desc">เก็บใน Dry Bag — ใส่ขึ้นรถหลัง Madakaripura / Tumpak Sewu</div><div class="item-tags"><span class="tag tag-water">น้ำตก</span></div></div></label>
+  </div>
+
+  <!-- GEAR -->
+  <div class="section-card">
+    <div class="section-head">
+      <span class="section-icon">🎒</span>
+      <span class="section-title">Gear & อุปกรณ์</span>
+      <span class="section-counter" id="cnt-gear">0/0</span>
+    </div>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">📱 ซองกันน้ำมือถือ</div><div class="item-desc">ถ่ายรูปใกล้น้ำตกได้สบายใจ — Madakaripura ละอองแรงมาก</div><div class="item-tags"><span class="tag tag-water">น้ำตก</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">📶 SIM Card Telkomsel</div><div class="item-desc">ซื้อที่สนามบิน Juanda Surabaya — สัญญาณดีสุดในพื้นที่ห่างไกล</div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">📷 Camera + ถ่านสำรอง / SD สำรอง</div><div class="item-desc">ความเย็น Bromo/Ijen กินถ่านเร็วมาก — เตรียม backup</div><div class="item-tags"><span class="tag tag-bromo">Bromo</span><span class="tag tag-ijen">Ijen</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🌡️ Hand Warmers (ใช้แล้วทิ้ง)</div><div class="item-desc">ใส่ในถุงมือตอน Ijen — ช่วยได้มากตอนหนาวจัดที่ปากปล่อง</div><div class="item-tags"><span class="tag tag-ijen">Ijen</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🛏️ Neck Pillow + Eye Mask</div><div class="item-desc">ขับรถ 4–5 ชม./วัน — นอนในรถได้เลย</div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🥾 Trekking Poles (optional)</div><div class="item-desc">ช่วยมากตอนลงปล่อง Ijen — ทางชันกรวด</div><div class="item-tags"><span class="tag tag-ijen">Ijen</span></div></div></label>
+  </div>
+
+  <!-- HEALTH -->
+  <div class="section-card">
+    <div class="section-head">
+      <span class="section-icon">💊</span>
+      <span class="section-title">ยา & สุขภาพ</span>
+      <span class="section-counter" id="cnt-health">0/0</span>
+    </div>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">💊 ยาแก้เมารถ</div><div class="item-desc">ขับรถวันละ 4–5 ชม. ถนนคดเคี้ยวขึ้นเขา — จำเป็นมาก</div><div class="item-tags"><span class="tag tag-must">★ MUST</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">💊 ยาพาราเซตามอล</div><div class="item-desc">ปวดหัวจากความสูง — Bromo 2,329m / Ijen 2,799m</div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">💊 ยาท้องเสีย + ยาธาตุน้ำแดง</div><div class="item-desc">กินอาหาร local ตลอด — เตรียมไว้ดีกว่า</div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🩹 First Aid พื้นฐาน</div><div class="item-desc">พลาสเตอร์ · แอลกอฮอล์ · ผ้าก๊อซ — Tumpak Sewu ทางลื่น</div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">☀️ Sunscreen SPF 50+</div><div class="item-desc">Bromo Sea of Sand โดนแดดเต็มๆ ช่วงเช้า</div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🧴 ยากันยุง (DEET)</div><div class="item-desc">บริเวณน้ำตกและป่า — ยุงเยอะช่วง June rainy season</div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">💧 เกลือแร่ / ORS</div><div class="item-desc">Ijen trek หนักมาก — dehydration ง่าย</div><div class="item-tags"><span class="tag tag-ijen">Ijen</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🏥 Travel Insurance (ครอบคลุม hiking)</div><div class="item-desc">ภูเขาไฟ · น้ำตกลื่น · trek ตี 2 — ทำไว้ดีกว่า</div><div class="item-tags"><span class="tag tag-must">★ MUST</span></div></div></label>
+  </div>
+
+  <!-- SNACKS -->
+  <div class="section-card">
+    <div class="section-head">
+      <span class="section-icon">🍫</span>
+      <span class="section-title">Snacks & อาหารพกพา</span>
+      <span class="section-counter" id="cnt-snacks">0/0</span>
+    </div>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🍫 Energy Bars / Protein Bars</div><div class="item-desc">กินระหว่างเดินขึ้น Ijen 3 ชม. — ห้ามท้องว่าง</div><div class="item-tags"><span class="tag tag-ijen">Ijen</span></div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🥛 นม UHT / นมกล่อง</div><div class="item-desc">ทานในรถระหว่างเดินทาง — มื้อเช้าบางวันอาจเร็วมาก</div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">🍪 ขนมอบ / ถั่ว</div><div class="item-desc">กินระหว่างรถ 4–5 ชม. — ร้านอาหารหายากบางช่วง</div></div></label>
+    <label class="item" onclick="toggle(this)"><input type="checkbox"><div class="item-body"><div class="item-name">☕ กาแฟซอง / 3-in-1</div><div class="item-desc">ดื่มก่อนขึ้น Ijen ตี 2 — มี coffee break ที่ Bromo ด้วย</div></div></label>
+  </div>
+
+  <!-- MONEY -->
+  <div class="money-card">
+    <div class="money-head">
+      <h3>💵 งบประมาณต่อคน — ทั้ง Trip</h3>
+      <p>10 คน · ไม่รวม tour package · กินดีอยู่ดี</p>
+    </div>
+    <div class="money-body">
+      <div class="money-row"><span class="money-icon">🍽️</span><div class="money-info"><div class="money-label">Lunch + Dinner × 5 วัน</div><div class="money-sub">มื้อละ ~100–150k IDR · กินดี local + restaurant</div></div><div class="money-amount">1,000,000–<br>1,500,000 IDR</div></div>
+      <div class="money-row"><span class="money-icon">🌆</span><div class="money-info"><div class="money-label">Surabaya คืน Jun 11</div><div class="money-sub">ดินเนอร์ + เดินเล่น + Grab/Gojek</div></div><div class="money-amount">200,000–<br>300,000 IDR</div></div>
+      <div class="money-row"><span class="money-icon">☕</span><div class="money-info"><div class="money-label">Snacks / กาแฟ / น้ำดื่ม</div><div class="money-sub">ระหว่างรถ + ระหว่าง hike</div></div><div class="money-amount">300,000–<br>500,000 IDR</div></div>
+      <div class="money-row"><span class="money-icon">🛍️</span><div class="money-info"><div class="money-label">Shopping / ของที่ระลึก</div><div class="money-sub">Batik · Kopi Java · ของฝาก</div></div><div class="money-amount">300,000–<br>700,000 IDR</div></div>
+      <div class="money-row"><span class="money-icon">🐴</span><div class="money-info"><div class="money-label">ขี่ม้า Bromo (optional)</div><div class="money-sub">ถ้าอยากขี่ เตรียมเพิ่ม</div></div><div class="money-amount">+150,000–<br>300,000 IDR</div></div>
+      <div class="money-row"><span class="money-icon">💝</span><div class="money-info"><div class="money-label">Tips ไกด์ทุกจุด</div><div class="money-sub">Madakaripura · Bromo · Tumpak Sewu · Ijen</div></div><div class="money-amount">100,000–<br>200,000 IDR</div></div>
+    </div>
+    <div class="money-total">
+      <div>
+        <div class="money-total-label">💰 รวมที่แนะนำให้แลก</div>
+        <div class="money-total-sub">ต่อคน · สำหรับ personal expenses</div>
+      </div>
+      <div style="text-align:right">
+        <div class="money-total-amount">~2–3M IDR</div>
+        <div class="money-total-sub">≈ 5,000–7,500 ฿</div>
+      </div>
+    </div>
+    <div class="money-tips"><b>💡 Tips แลกเงิน:</b> แลกที่ไทยก่อนบิน (SuperRich / Vasu) rate ดีกว่า · หรือแลกที่สนามบิน Juanda ตอนถึง · <b>ไปกัน 10 คน</b> แลกรวมได้ rate ดีขึ้น · ATM ใน Indonesia มีค่าธรรมเนียม ~180 ฿/ครั้ง</div>
+  </div>
+
+  <!-- SURABAYA -->
+  <div class="info-card">
+    <div class="info-head">
+      <span>🌆</span>
+      <span>Surabaya คืน Jun 11 — ทำอะไรได้บ้าง?</span>
+    </div>
+    <div class="info-body">
+      <div class="info-item"><span class="info-dot">›</span><div><strong>Bebek Goreng H. Slamet</strong> <span>— เป็ดทอดชื่อดัง Surabaya ต้องลอง ราคาย่อมเยา</span></div></div>
+      <div class="info-item"><span class="info-dot">›</span><div><strong>Tunjungan Plaza</strong> <span>— เดินห้าง + กินข้าว เปิดถึง 22:00 ใกล้ใจกลางเมือง</span></div></div>
+      <div class="info-item"><span class="info-dot">›</span><div><strong>Street food แถวโรงแรม</strong> <span>— Sate · Nasi Goreng · Es Teh · ราคาถูกมาก</span></div></div>
+      <div class="info-item"><span class="info-dot">›</span><div><strong>Grab / Gojek</strong> <span>— ถูกมาก ~20,000–40,000 IDR/เที่ยว ใช้ได้ทั่วเมือง</span></div></div>
+    </div>
+  </div>
+
+  <!-- WARNINGS -->
+  <div class="warn-card">
+    <h4>⚠️ อย่าลืมเด็ดขาด</h4>
+    <ul class="warn-list">
+      <li>Headlamp — ขึ้น Ijen ตี 2 ทางมืดสนิท ไม่มี = ไปต่อไม่ได้</li>
+      <li>Adapter ปลั๊กยุโรป 2 ขากลม — ปลั๊กไทยใช้ไม่ได้ใน Indonesia</li>
+      <li>Gas mask — Tour รวมให้แล้ว ✅ ไม่ต้องซื้อเอง</li>
+      <li>Dry Bag — Madakaripura เปียกโชก 100% ถ้าไม่มีกล้อง/มือถือพัง</li>
+      <li>SIM Telkomsel — ซื้อที่สนามบิน Juanda วันแรก</li>
+      <li>ยาแก้เมารถ — ขับรถเขาคดเคี้ยวทุกวัน จำเป็นมาก</li>
+    </ul>
+  </div>
+
+  <button class="btn-reset" onclick="resetAll()">↺ Reset ทั้งหมด</button>
+
+</div>
